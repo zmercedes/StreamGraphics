@@ -44,11 +44,7 @@ public class DragonPath : MonoBehaviour {
 		totalFrames = currentLine.Length + fadeOutFrames;
 		total = line.points.Count ;
 		int half = total / 2;
-		/*for(int i = 0; i < half; i++) {
-			//float t = (float)i / half;
-			//Color c = Color.Lerp(Color.black, lineColor, t);
-			line.SetPointColor(i, lineColor);
-		}*/
+		
 		for(int i = half; i < total; i++) {
 			line.SetPointColor(i, Color.black);
 		}
@@ -68,38 +64,6 @@ public class DragonPath : MonoBehaviour {
 				current = 0;
 			}
 		}
-		/*if(current < total) {
-			SetDirection(path[current]);
-			for(int i =0; i < total; i++) {
-				PolylinePoint p = line.points[i];
-				if(i == total -1) {
-					point += direction * 0.5f;
-					currentLine[i] = point;
-					p.point = point;
-				}
-				else {
-					currentLine[i] = currentLine[i + 1];
-					p.point = currentLine[i];
-				}
-
-				line.points[i] = p;
-			}
-
-			line.meshOutOfDate = true;
-			current++;
-		}
-		*//*if (current > path.Length -1){
-			for(int i = 0; i<currentLine.Length;i++) currentLine[i] = Vector2.zero;
-
-			current = 0;
-		}*//*
-		
-		if(current > total) {
-
-		
-		}*/
-		/*if (current)
-			for*/
 	}
 
 	void ResetColor() { 
